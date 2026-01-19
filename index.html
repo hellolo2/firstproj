@@ -8,12 +8,14 @@
 </head>
 <body>
 
-  <h1>구글 계정 검색</h1>
+  <!-- 전체를 감싸는 컨테이너 추가 (배열 깨짐 해결 핵심) -->
+  <div class="container">
 
-  <!-- 검색 영역 -->
-  <form id="searchForm">
-    <div>
-      <label for="studentNumber">학번</label><br>
+    <h1><span>🔍 구글 계정 검색</span></h1>
+
+    <!-- 검색 영역 -->
+    <form id="searchForm">
+      <label for="studentNumber">학번</label>
       <input
         type="text"
         id="studentNumber"
@@ -21,12 +23,8 @@
         placeholder="예) 20101"
         required
       >
-    </div>
 
-    <br>
-
-    <div>
-      <label for="studentName">이름</label><br>
+      <label for="studentName">이름</label>
       <input
         type="text"
         id="studentName"
@@ -34,28 +32,25 @@
         placeholder="예) 홍길동"
         required
       >
+
+      <button type="submit">검색</button>
+    </form>
+
+    <!-- 결과 출력 영역 -->
+    <div class="result" id="result">
+      <h2>📄 검색 결과</h2>
+
+      <p>
+        <strong>구글 계정 ID</strong><br>
+        <span id="googleId">-</span>
+      </p>
+
+      <p>
+        <strong>비밀번호</strong><br>
+        <span id="googlePw">-</span>
+      </p>
     </div>
 
-    <br>
-
-    <button type="submit">검색</button>
-  </form>
-
-  <hr>
-
-  <!-- 결과 출력 영역 -->
-  <div id="result">
-    <h2>검색 결과</h2>
-
-    <p>
-      <strong>구글 계정 ID:</strong>
-      <span id="googleId">-</span>
-    </p>
-
-    <p>
-      <strong>비밀번호:</strong>
-      <span id="googlePw">-</span>
-    </p>
   </div>
 
 </body>
