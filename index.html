@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>구글 계정 검색</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 전체 컨테이너 -->
+  <div class="container">
+
+    <h1>구글 계정 검색</h1>
+
+    <!-- 검색 영역 -->
+    <form id="searchForm">
+      <div>
+        <label for="studentNumber">학번</label><br>
+        <input
+          type="text"
+          id="studentNumber"
+          name="studentNumber"
+          placeholder="예) 20101"
+          required
+        >
+      </div>
+
+      <br>
+
+      <div>
+        <label for="studentName">이름</label><br>
+        <input
+          type="text"
+          id="studentName"
+          name="studentName"
+          placeholder="예) 홍길동"
+          required
+        >
+      </div>
+
+      <button type="submit">검색</button>
+    </form>
+
+    <!-- 결과 출력 영역 -->
+    <div id="result">
+      <h2>검색 결과</h2>
+
+      <p>
+        <strong>구글 계정 ID:</strong>
+        <span id="googleId">-</span>
+      </p>
+
+      <p>
+        <strong>비밀번호:</strong>
+        <span id="googlePw">-</span>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- JS 연결 -->
+  <script src="script.js"></script>
+
+</body>
+</html>
